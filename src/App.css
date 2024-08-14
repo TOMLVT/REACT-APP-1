@@ -1,0 +1,161 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto' , sans-serif;
+}
+
+.container_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+}
+.label_input {
+    font-size: 13px;
+    color: grey;
+}
+.form_body {
+    width: 500px;
+    max-width: 100%;
+}
+.form_input_small {
+    position: relative;
+    margin-top: 20px;
+    flex-direction: column;
+}
+.title_form {
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 2px solid #333;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.form_btn_small {
+    margin-top: 20px;
+}
+.input_sm {
+
+    width: 100%;
+    height: 45px;
+    border:1px solid #e5e5e5;
+    padding-inline: 1rem;
+    border-radius: 4px;
+    outline: none;
+    margin-top: 6px;
+}
+.span_icon {
+    position: absolute;
+    top: 55%;
+    right: 2%;
+    cursor: pointer;
+}
+.random_icon {
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    color: grey;
+}
+.submitButton {
+    background-color: grey;
+    padding: 13px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+.disable {
+    background-color: rgb(210, 119, 66);
+}
+.btn_sm {
+    width: 100%;
+    padding: 15px;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(109, 221, 128);
+}
+.two_btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+    gap: 4px;
+}
+
+.container_label {
+    display: flex;
+    align-items: center;
+}
+
+.span_error {
+    font-size: 13px;
+    font-weight: 500;
+    color: red;
+    display: flex;
+}
+
+.icon_check {
+    color: green;
+}
+
+.check_input_body {
+    display:flex ;
+    justify-content: space-between;
+}
+
+.container_alert_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container_alert_top button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .notificaiton_alert {
+    width: 400px;
+    position: fixed;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(194, 23, 23);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1;
+    opacity: 1;
+    transition: top 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .notificaiton_alert p {
+    margin: 0;
+  }
+  
+  .closebtn {
+    color: white;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .closebtn:hover {
+    cursor: pointer;
+  }
+  
+
+  @media ( max-width : 480px) {
+
+  }
