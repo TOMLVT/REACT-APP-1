@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotate, faEye, faEyeSlash, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
-
+import ImageSuccess from './assets/images/404-tick.png'
 const App = () => {
   const [actionUser, setActionUser] = useState('Login');
   const [showPassword, setShowPassword] = useState(false);
   const [showNotification , setShowNotification] = useState(false)
-
+  const [showModal , setShowModal] = useState(false)
+  const [isvalidInput , showIsvalidInput] = useState(false)
   // trạng thái ban đầu của form 
   const [formData, setFormData] = useState({
     userName: '',
@@ -81,13 +82,19 @@ const App = () => {
     const userEmail = formData.userEmail;
     if (userEmail.length === 0) {
       setError((prev) => ({ ...prev, userEmail: 'Email is not empty!' }));
+      showIsvalidInput(true)
       return false;
+    } else {
+      showIsvalidInput(false)
     }
 
     const stringEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!userEmail.match(stringEmail)) {
+      showIsvalidInput(true)
       setError((prev) => ({ ...prev, userEmail: 'Email invalid!' }));
       return false;
+    } else {
+      showIsvalidInput(false)
     }
 
     setError((prev) => ({ ...prev, userEmail: <FontAwesomeIcon icon={faCircleCheck} className='icon_check'/> }));
@@ -102,7 +109,13 @@ const App = () => {
       return false;
     }
 
- 
+    if (userPassword.length < 5 ) {
+      showIsvalidInput(true)
+      setError((pre) => ({...pre , userPassword : 'Your password more than 5 charaters !'}))
+      return false
+    } else {
+      showIsvalidInput(false)
+    }
 
     setError((prev) => ({ ...prev, userPassword: <FontAwesomeIcon icon={faCircleCheck} className='icon_check'/> }));
     return true;
@@ -132,14 +145,16 @@ const App = () => {
         const isUserConfirmPassword = validateConfirmPassword()
 
         if (isUserName && isUserEmail && isUserPassword && isUserConfirmPassword) {
-          alert('Đăng ký thành công !')
-
+          //show modal 
+         setShowModal(true)
+        
           // Reset information form when user sign up successful
           setFormData({
             userName: '',
             userPhone: '',
             userEmail: '',
             userPassword: '',
+            userConfirmPassword: '',
             userText: ''
           });
       
@@ -150,6 +165,7 @@ const App = () => {
             userEmail: '',
             userPassword: '',
             userText: '',
+            userConfirmPassword: '',
             submitError: ''
           });
         } else {
@@ -165,6 +181,8 @@ const App = () => {
       setShowNotification(false)
     }
 
+   
+  
 
   return (
     <div className='container_body'>
@@ -192,10 +210,10 @@ const App = () => {
           <div className='form_input_small'>
             <div className='check_input_body'>
               <label className='label_input'>Email</label>
-              {actionUser === 'Sign up' ?   <span className='span_error'>{error.userEmail}</span> : null}
+              <span className='span_error'>{error.userEmail}</span>
             </div>
             <input
-              className='input_sm'
+              className={`input_sm ${isvalidInput ? 'erro_input' : showIsvalidInput }`}
               placeholder='Enter your email...'
               id='userEmail'
               onChange={handleInputChange}
@@ -221,8 +239,8 @@ const App = () => {
            {actionUser === 'Sign up' ?   <span className='span_error'>{error.userPassword}</span> : null}
           </div>
           
-            <input
-              className='input_sm'
+            <input            
+              className={`input_sm ${isvalidInput ? 'erro_input' : showIsvalidInput }`}
               placeholder='Enter your password...'
               type={showPassword ? 'text' : 'password'}
               id='userPassword'
@@ -278,6 +296,25 @@ const App = () => {
              
             </div>
           )}
+
+
+          {showModal && (
+        <>
+   
+    <div className="backdrop"></div>
+    
+    <div className={`popup ${showModal ? 'open-Popup' : ''}`}>
+      <img src={ImageSuccess} alt="Success Icon" />
+      <h3>Thank You</h3>
+      <p className="des_small">Your details have been successfully submitted. Thank you!</p>
+      <button type="button" onClick={() => setShowModal(false)}>
+        OK
+      </button>
+    </div>
+  </>
+)}
+
+
 
           <div className='two_btn'>
             <button
