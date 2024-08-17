@@ -7,6 +7,8 @@ const Home = () => {
            <div className='box_link_connect'>
            <Link to="/login" className='link_connect'>Form Login</Link>
            <Link to="/todolist" className='link_connect'>ToDo List</Link>
+           <Link to="/tab" className='link_connect'>Split Tab</Link>
+           <Link to="/change" className='link_connect'>Change Images</Link>
            </div>
     </div>
   )
