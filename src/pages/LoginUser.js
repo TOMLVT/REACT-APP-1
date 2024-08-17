@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import '../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRotate, faEye, faEyeSlash, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { faRotate, faEye, faEyeSlash, faCircleCheck  , faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import ImageSuccess from '../assets/images/404-tick.png'
+import { Link } from 'react-router-dom';
 const LoginUser = () => {
   const [actionUser, setActionUser] = useState('Login');
   const [showPassword, setShowPassword] = useState(false);
@@ -330,8 +331,14 @@ const LoginUser = () => {
               Sign up
             </button>
           </div>
+         <div className='box_again'>
+         <FontAwesomeIcon icon={faArrowLeft} /> 
+         <Link to="/" className='Page_again'>Quay lại</Link>
+         </div>
         </div>
+       
       </div>
+    
     </div>
   );
 };
