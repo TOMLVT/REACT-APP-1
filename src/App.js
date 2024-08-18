@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import TodoList from './pages/todoList';
 import SplitTab from './pages/SplitTab';
 import ChangeImage from './pages/ChangeImage';
+import DragDrop from './pages/DragDrop';
 const App = () => {
   return (
     <div>
@@ -15,6 +16,7 @@ const App = () => {
             <Route path='/todolist' element={ <TodoList/>}/>
             <Route path='/tab' element={ <SplitTab/>}/>
             <Route path='/change' element={ <ChangeImage/>}/>
+            <Route path='/dragdrop' element={ <DragDrop/>}/>
           </Routes>
         </Router>
          

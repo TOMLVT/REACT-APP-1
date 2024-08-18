@@ -9,6 +9,7 @@ const Home = () => {
            <Link to="/todolist" className='link_connect'>ToDo List</Link>
            <Link to="/tab" className='link_connect'>Split Tab</Link>
            <Link to="/change" className='link_connect'>Change Images</Link>
+           <Link to="/dragdrop" className='link_connect'>Drag And Drop</Link>
            </div>
     </div>
   )
