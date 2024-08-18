@@ -10,6 +10,7 @@ const Home = () => {
            <Link to="/tab" className='link_connect'>Split Tab</Link>
            <Link to="/change" className='link_connect'>Change Images</Link>
            <Link to="/dragdrop" className='link_connect'>Drag And Drop</Link>
+           <Link to="/qrcode" className='link_connect'>Create QR Code</Link>
            </div>
     </div>
   )

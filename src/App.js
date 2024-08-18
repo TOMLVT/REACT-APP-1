@@ -6,6 +6,8 @@ import TodoList from './pages/todoList';
 import SplitTab from './pages/SplitTab';
 import ChangeImage from './pages/ChangeImage';
 import DragDrop from './pages/DragDrop';
+import CodeCreateqr from './pages/codeCreateqr';
+
 const App = () => {
   return (
     <div>
@@ -17,6 +19,7 @@ const App = () => {
             <Route path='/tab' element={ <SplitTab/>}/>
             <Route path='/change' element={ <ChangeImage/>}/>
             <Route path='/dragdrop' element={ <DragDrop/>}/>
+            <Route path='/qrcode' element={ <CodeCreateqr />}/>
           </Routes>
         </Router>
          
