@@ -11,6 +11,8 @@ const Home = () => {
            <Link to="/change" className='link_connect'>Change Images</Link>
            <Link to="/dragdrop" className='link_connect'>Drag And Drop</Link>
            <Link to="/qrcode" className='link_connect'>Create QR Code</Link>
+           <Link to="/more" className='link_connect'>View and hide</Link>
+           <Link to="/select" className='link_connect'>Select Product</Link>
            </div>
     </div>
   )

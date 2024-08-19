@@ -15,7 +15,7 @@
     align-items: center;
     height: 100vh;
     padding: 10px;
-    background-color: aliceblue;
+    background-color: #fff;
 }
 .label_input {
     font-size: 13px;
@@ -432,4 +432,26 @@ border: 1px solid #e5e5e5;
   align-items: center;
   background: #0b0423;
   min-height: 100vh;
+}
+
+.box_Content {
+  width: 400px;
+  max-width: 100%;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+}
+
+.btn_content {
+  border: none;
+  padding: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.box_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
