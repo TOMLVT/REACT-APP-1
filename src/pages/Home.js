@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import '.././App.css'
 const Home = () => {
   return (
     <div className='container_body'>
@@ -13,6 +13,7 @@ const Home = () => {
            <Link to="/qrcode" className='link_connect'>Create QR Code</Link>
            <Link to="/more" className='link_connect'>View and hide</Link>
            <Link to="/select" className='link_connect'>Select Product</Link>
+           <Link to="/calculation" className='link_connect'>Calculation</Link>
            </div>
     </div>
   )

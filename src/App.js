@@ -9,6 +9,7 @@ import DragDrop from './pages/DragDrop';
 import CodeCreateqr from './pages/codeCreateqr';
 import ViewAndHide from './pages/ViewAndHide/ViewAndHide';
 import SelectProduct from './pages/SelectProduct/SelectProduct';
+import Calculation from './pages/Calculationn/Calculation';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
             <Route path='/qrcode' element={ <CodeCreateqr />}/>
             <Route path='/more' element={ <ViewAndHide />}/>
             <Route path='/select' element={ <SelectProduct />}/>
+            <Route path='/calculation' element={ <Calculation />}/>
           </Routes>
         </Router>
          
